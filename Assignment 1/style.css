@@ -1,0 +1,93 @@
+/* Torin Grasley COMP1054 Assignment 1
+
+/* Importing 2 web fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Using variables for colors */
+:root {
+    --bg1: #2c3e50;
+    --bg2: #4a69bd;
+    --text-color: #f5f5f5;
+    --accent: #f39c12;
+    --secondary: #bdc3c7;
+}
+
+/* Type Selector */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, var(--bg1), var(--bg2)); /* gradient background */
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ID selector */
+#zen-intro {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Class Selector */
+.summary {
+    font-size: 0.95rem;
+    color: var(--secondary);
+}
+
+/* Descendant Combinator */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* Child Combinator */
+.page-wrapper > section {
+    margin-bottom: 20px;
+}
+
+/* Adjacent siblings */
+header h1 + h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--accent);
+}
+
+/* General Sibling Combinator */
+.preamble h3 ~ p {
+    font-style: italic;
+    color: var(--secondary);
+}
+
+/* Attribute Selector */
+a[title] {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* Psuedo Class */
+a[title]:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--secondary);
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
